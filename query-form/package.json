@@ -1,0 +1,87 @@
+{
+  "name": "@thelastcookies/query-form",
+  "version": "0.1.2",
+  "description": "基于 ant-design-vue Form 封装的查询表单组件，支持字段配置化渲染、展开收起与一键清空",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "author": "thelastcookies",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vue3",
+    "ant-design-vue",
+    "form",
+    "query-form",
+    "component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thelastcookies/npm-packages.git",
+    "directory": "query-form"
+  },
+  "bugs": {
+    "url": "https://github.com/thelastcookies/npm-packages/issues"
+  },
+  "homepage": "https://github.com/thelastcookies/npm-packages/tree/master/query-form#readme",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./query-form": {
+      "types": "./dist/components/QueryForm.d.ts",
+      "import": "./dist/components/QueryForm.js"
+    },
+    "./base-select": {
+      "types": "./dist/components/BaseSelect.d.ts",
+      "import": "./dist/components/BaseSelect.js"
+    },
+    "./base-tree-select": {
+      "types": "./dist/components/BaseTreeSelect.d.ts",
+      "import": "./dist/components/BaseTreeSelect.js"
+    },
+    "./base-checkbox": {
+      "types": "./dist/components/BaseCheckbox.d.ts",
+      "import": "./dist/components/BaseCheckbox.js"
+    },
+    "./base-number-range": {
+      "types": "./dist/components/BaseNumberRange.d.ts",
+      "import": "./dist/components/BaseNumberRange.js"
+    },
+    "./style.css": "./dist/query-form.css"
+  },
+  "scripts": {
+    "dev": "vite playground",
+    "build": "vite build",
+    "check": "vue-tsc --noEmit",
+    "prepublishOnly": "pnpm build",
+    "release-dry": "npm publish --dry-run",
+    "release": "npm publish --access public"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1"
+  },
+  "peerDependencies": {
+    "ant-design-vue": ">=4.2.6",
+    "vue": ">=3.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@vitejs/plugin-vue": "^6.0.6",
+    "ant-design-vue": "^4.2.6",
+    "dayjs": "^1.11.13",
+    "typescript": "^6.0.3",
+    "vite": "8.1.6",
+    "vite-plugin-dts": "^5.1.2",
+    "vue": "^3.5.33",
+    "vue-tsc": "^3.2.7"
+  }
+}
