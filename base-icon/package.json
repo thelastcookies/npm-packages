@@ -1,0 +1,78 @@
+{
+  "name": "@thelastcookies/base-icon",
+  "version": "0.1.1",
+  "description": "基于 @iconify/vue 的图标组件，兼容 i-mdi-* 类名协议，支持在线按需拉取与离线集合注入",
+  "type": "module",
+  "author": "thelastcookies",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "vue3",
+    "icon",
+    "iconify",
+    "mdi",
+    "component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thelastcookies/npm-packages.git",
+    "directory": "base-icon"
+  },
+  "bugs": {
+    "url": "https://github.com/thelastcookies/npm-packages/issues"
+  },
+  "homepage": "https://github.com/thelastcookies/npm-packages/tree/master/base-icon#readme",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./base-icon": {
+      "types": "./dist/components/BaseIcon.d.ts",
+      "import": "./dist/components/BaseIcon.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "vite playground",
+    "build": "vite build",
+    "check": "vue-tsc --noEmit",
+    "prepublishOnly": "pnpm build",
+    "p": "npm version patch",
+    "m": "npm version minor",
+    "ma": "npm version major",
+    "release-dry": "npm publish --dry-run",
+    "release": "npm publish --access public"
+  },
+  "dependencies": {
+    "@iconify/vue": "^5.0.0"
+  },
+  "peerDependencies": {
+    "vue": ">=3.5.0"
+  },
+  "peerDependenciesMeta": {
+    "@iconify-json/mdi": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify/utils": "^3.1.7",
+    "@types/node": "^25.6.0",
+    "@vitejs/plugin-vue": "^6.0.6",
+    "typescript": "^6.0.3",
+    "vite": "8.1.6",
+    "vite-plugin-dts": "^5.1.2",
+    "vite-plugin-lib-inject-css": "^2.2.2",
+    "vue": "^3.5.33",
+    "vue-tsc": "^3.2.7"
+  }
+}
