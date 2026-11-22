@@ -68,12 +68,9 @@ const iconUrl = computed(() => {
 
 <template>
   <template v-if="type === 'iconify'">
-    <Icon
-      v-bind="$attrs"
-      :icon="iconName"
-      :style="sizeStyle"
-      class="base-icon inline-block vertical-sub"
-    />
+    <span v-bind="$attrs" class="base-icon" :style="sizeStyle">
+      <Icon :icon="iconName" :style="sizeStyle" />
+    </span>
   </template>
   <template v-else>
     <img
@@ -85,8 +82,16 @@ const iconUrl = computed(() => {
 </template>
 
 <style scoped>
+.base-icon {
+  display: inline-block;
+  vertical-align: sub;
+}
 .base-icon.logo {
   cursor: pointer;
   transition: filter 0.5s;
+}
+.base-icon + span,
+span + .base-icon {
+  margin-inline-start: 6px;
 }
 </style>
