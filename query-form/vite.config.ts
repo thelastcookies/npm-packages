@@ -17,8 +17,8 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      // vue、ant-design-vue 与图标库作为外部依赖，不打包进产物
-      external: [/^vue($|\/)/, /^ant-design-vue($|\/)/, /^@ant-design($|\/)/, /^@ctrl($|\/)/],
+      // vue、ant-design-vue 与 base-icon 作为外部依赖，不打包进产物
+      external: [/^vue($|\/)/, /^ant-design-vue($|\/)/, /^@thelastcookies($|\/)/],
       output: {
         // 保留模块结构，产物路径与 src 一致，支持按组件单独引入
         preserveModules: true,

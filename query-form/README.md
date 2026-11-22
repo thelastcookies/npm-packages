@@ -8,6 +8,7 @@
 pnpm add @thelastcookies/query-form
 ```
 
+依赖 `@thelastcookies/query-form >= 0.1.3`。
 依赖 `vue >= 3.5` 与 `ant-design-vue >= 4.2.6`（peerDependencies）。
 
 ## 本地预览 Sample

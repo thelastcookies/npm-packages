@@ -5,7 +5,7 @@ import type { ValidateErrorEntity } from 'ant-design-vue/es/form/interface';
 import type { QueryFormField, Recordable } from '../types';
 import { computed, ref, useSlots } from 'vue';
 import { Button, Col, DatePicker, Form, FormItem, Input, message, Radio, RangePicker, Row, Textarea } from 'ant-design-vue';
-import { ClearOutlined, DownOutlined, SearchOutlined, UpOutlined } from '@ant-design/icons-vue';
+import { BaseIcon } from '@thelastcookies/base-icon';
 import BaseCheckbox from './BaseCheckbox.vue';
 import BaseNumberRange from './BaseNumberRange.vue';
 import BaseSelect from './BaseSelect.vue';
@@ -149,13 +149,13 @@ const handleClear = () => {
         <slot name="btn">
           <slot name="fst-btn">
             <Button type="primary" html-type="submit">
-              <template #icon><SearchOutlined /></template>
+              <BaseIcon icon="i-mdi-magnify" />
               查询
             </Button>
           </slot>
           <slot name="snd-btn">
             <Button class="query-form-btn-clear" @click="handleClear">
-              <template #icon><ClearOutlined /></template>
+              <BaseIcon icon="i-mdi-filter-remove-outline" />
               清空
             </Button>
           </slot>
@@ -163,11 +163,11 @@ const handleClear = () => {
         <Button v-if="!hideExpand && (fields.length + slotsCount) >= ITEM_IN_LINE" type="link"
           @click="expand = !expand">
           <template v-if="expand">
-            <UpOutlined />
+            <BaseIcon icon="i-mdi-chevron-up" />
             收起
           </template>
           <template v-else>
-            <DownOutlined />
+            <BaseIcon icon="i-mdi-chevron-down" />
             展开
           </template>
         </Button>

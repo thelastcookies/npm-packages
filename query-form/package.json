@@ -1,6 +1,6 @@
 {
   "name": "@thelastcookies/query-form",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "基于 ant-design-vue Form 封装的查询表单组件，支持字段配置化渲染、展开收起与一键清空",
   "type": "module",
   "sideEffects": [
@@ -69,7 +69,7 @@
     "release": "npm publish --access public"
   },
   "dependencies": {
-    "@ant-design/icons-vue": "^7.0.1"
+    "@thelastcookies/base-icon": "^0.1.4"
   },
   "peerDependencies": {
     "ant-design-vue": ">=4.2.6",

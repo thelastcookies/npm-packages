@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import type { Rule } from 'ant-design-vue/es/form';
 import type { Dayjs } from 'dayjs';
+import dayjs from 'dayjs';
 import type { QueryFormField, Recordable } from '../src/types';
 import { ref } from 'vue';
 import { Button, Divider } from 'ant-design-vue';
-import { FlagOutlined } from '@ant-design/icons-vue';
-import dayjs from 'dayjs';
+import { BaseIcon } from '@thelastcookies/base-icon';
 import QueryForm from '../src/components/QueryForm.vue';
 
 // 模拟用户列表接口
@@ -639,9 +639,9 @@ const otherForm = ref<Recordable<any>>({
         v-model:form="otherForm"
       >
         <div class="sample-slot">
-          <FlagOutlined class="sample-flag-red" />
+          <BaseIcon class="sample-flag-red" icon="i-mdi-flag-triangle" />
           默认插槽内容
-          <FlagOutlined class="sample-flag-green" />
+          <BaseIcon class="sample-flag-green" icon="i-mdi-flag-triangle" />
         </div>
         <template #btn>
           <Button>#btn 插槽内容，覆盖全部按钮</Button>
@@ -770,5 +770,8 @@ const otherForm = ref<Recordable<any>>({
 /* 插槽按钮间距 */
 .sample-ml {
   margin-left: 0.5rem;
+}
+:deep(.ant-btn > .base-icon + span, .ant-btn > span + .base-icon) {
+  margin-inline-start: 6px !important;
 }
 </style>
