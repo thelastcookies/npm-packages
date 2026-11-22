@@ -2,10 +2,12 @@ import { resolve } from 'node:path';
 import vue from '@vitejs/plugin-vue';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 export default defineConfig({
   plugins: [
     vue(),
+    libInjectCss(),
     // 生成类型声明文件
     dts({ tsconfigPath: './tsconfig.json', entryRoot: resolve('src'), include: ['src/**/*'], cleanVueFileName: true }),
   ],
@@ -13,10 +15,7 @@ export default defineConfig({
     lib: {
       entry: resolve('src/index.ts'),
       formats: ['es'],
-      cssFileName: 'query-form',
     },
-    // 关闭 CSS 代码分割，所有组件样式合并输出到单一 query-form.css
-    cssCodeSplit: false,
     rollupOptions: {
       // vue、ant-design-vue 与图标库作为外部依赖，不打包进产物
       external: [/^vue($|\/)/, /^ant-design-vue($|\/)/, /^@ant-design($|\/)/, /^@ctrl($|\/)/],

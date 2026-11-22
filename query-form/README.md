@@ -25,7 +25,6 @@ pnpm dev
 import { ref } from 'vue';
 import { QueryForm } from '@thelastcookies/query-form';
 import type { QueryFormField } from '@thelastcookies/query-form';
-import '@thelastcookies/query-form/style.css';
 
 const form = ref<Record<string, any>>({});
 
@@ -51,8 +50,6 @@ import BaseTreeSelect from '@thelastcookies/query-form/base-tree-select';
 import BaseCheckbox from '@thelastcookies/query-form/base-checkbox';
 import BaseNumberRange from '@thelastcookies/query-form/base-number-range';
 ```
-
-样式统一从 `@thelastcookies/query-form/style.css` 引入。
 
 ## Props
 
