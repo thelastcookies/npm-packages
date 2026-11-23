@@ -82,12 +82,14 @@ const iconUrl = computed(() => {
 </template>
 
 <style scoped>
+@property --colorPrimaryHover {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #3C89E8;
+}
 .base-icon {
   display: inline-block;
   vertical-align: sub;
-}
-:where(.logo) {
-  --colorPrimaryHover: #3C89E8;
 }
 .logo {
   cursor: pointer;
