@@ -1,6 +1,6 @@
 {
   "name": "@thelastcookies/base-icon",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "基于 @iconify/vue 的图标组件，兼容 i-mdi-* 类名协议，支持在线按需拉取与离线集合注入",
   "type": "module",
   "author": "thelastcookies",

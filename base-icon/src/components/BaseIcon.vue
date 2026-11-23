@@ -60,7 +60,7 @@ const iconUrl = computed(() => {
   if (url.startsWith('/')) {
     return url.replace('/', '');
   } else {
-    return '';
+    return url;
   }
 });
 
@@ -86,9 +86,15 @@ const iconUrl = computed(() => {
   display: inline-block;
   vertical-align: sub;
 }
-.base-icon.logo {
+:where(.logo) {
+  --colorPrimaryHover: #3C89E8;
+}
+.logo {
   cursor: pointer;
   transition: filter 0.5s;
+}
+.logo:hover {
+  filter: drop-shadow(0px 0px 3px var(--colorPrimaryHover));
 }
 .base-icon + span,
 span + .base-icon {
